@@ -98,8 +98,8 @@
         }
 
         .icon {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
         }
 
         .bg_data {
@@ -128,24 +128,35 @@
             padding: 22px 22px 22px 92px;
             margin-top: 45px;
         }
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 3px;
+        }
     </style>
 </head>
 
 <body class="main_bg">
-    <div>
+    <div id="card">
         <div class="description">
             <span class="h1"><strong>Weather App</strong></span>
-            <span class="h2">Today, 11 may</span>
+            <div class="row">
+                <span class="h2">Today,</span>
+                <span id="date" class="h2">11 may</span>
+            </div>
         </div>
-        <form id="form" class="form">
-            <input id="input_name" class="input" type="text" name="number" placeholder="Enter name">
-            <button type="submit" class="button_search"><img src="src/Vector.svg"></button>
-        </form>
+        <div id="form" class="form">
+            <input id="search" class="input" type="text" name="number" placeholder="Enter name">
+            <button id="button" class="button_search"><img src="src/Vector.svg"></button>
+        </div>
     </div>
+
+
     <div class="bg">
         <div>
-            <span class="text">Belarus</span>
-            <div class="weather">
+            <span id="city" class="text">Belarus</span>
+            <div id="temp" class="weather">
                 <span><strong>27</strong></span>
                 <span><strong>.</strong></span>
                 <sapn><strong>C</strong></sapn>
@@ -153,90 +164,10 @@
         </div>
 
         <div class="data">
-            <div class="bg_data">
-                <img class="icon" src="src/sun_1.svg">
-                <div class="text_data">
-                    <span class="time">9.00</span>
-                    <div class=" weather size">
-                        <span><strong>27</strong></span>
-                        <span><strong>.</strong></span>
-                        <sapn><strong>C</strong></sapn>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg_data">
-                <img class="icon" src="src/sun_1.svg">
-                <div class="text_data">
-                    <span class="time">9.00</span>
-                    <div class=" weather size">
-                        <span><strong>27</strong></span>
-                        <span><strong>.</strong></span>
-                        <sapn><strong>C</strong></sapn>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg_data">
-                <img class="icon" src="src/sun_1.svg">
-                <div class="text_data">
-                    <span class="time">9.00</span>
-                    <div class=" weather size">
-                        <span><strong>27</strong></span>
-                        <span><strong>.</strong></span>
-                        <sapn><strong>C</strong></sapn>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg_data">
-                <img class="icon" src="src/sun_1.svg">
-                <div class="text_data">
-                    <span class="time">9.00</span>
-                    <div class=" weather size">
-                        <span><strong>27</strong></span>
-                        <span><strong>.</strong></span>
-                        <sapn><strong>C</strong></sapn>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg_data">
-                <img class="icon" src="src/sun_1.svg">
-                <div class="text_data">
-                    <span class="time">9.00</span>
-                    <div class=" weather size">
-                        <span><strong>27</strong></span>
-                        <span><strong>.</strong></span>
-                        <sapn><strong>C</strong></sapn>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg_data">
-                <img class="icon" src="src/sun_1.svg">
-                <div class="text_data">
-                    <span class="time">9.00</span>
-                    <div class=" weather size">
-                        <span><strong>27</strong></span>
-                        <span><strong>.</strong></span>
-                        <sapn><strong>C</strong></sapn>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg_data">
-                <img class="icon" src="src/sun_1.svg">
-                <div class="text_data">
-                    <span class="time">9.00</span>
-                    <div class=" weather size">
-                        <span><strong>27</strong></span>
-                        <span><strong>.</strong></span>
-                        <sapn><strong>C</strong></sapn>
-                    </div>
-                </div>
-            </div>
+           
         </div>
     </div>
+
+    <script src="weather_app.js"></script>
 
 </body>
